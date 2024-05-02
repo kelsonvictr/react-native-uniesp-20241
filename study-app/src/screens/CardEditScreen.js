@@ -11,7 +11,7 @@ const CardEditScreen = ({ route, navigation }) => {
 
     const [title, setTitle] = useState(card.title || '')
     const [notes, setNotes] = useState(card.notes || '')
-    const [status, setStatus] = useState(card.status || '')
+    const [status, setStatus] = useState(card.status || 'backlog')
 
     useEffect(() => {
       if (id) {
