@@ -33,6 +33,9 @@ const CardListScreen = ({ navigation }) => {
             <TouchableOpacity style={styles.dueSoonButton} onPress={() => navigation.navigate('TasksDueSoon')}>
                 <Text style={styles.dueSoonButtonText}>Tasks a Vencer: {dueSoonCards.length}</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.suggestButton} onPress={() => navigation.navigate('SuggestCard')}>
+                <Text style={styles.suggestButtonText}>Pedir Sugestão de Card</Text>
+            </TouchableOpacity>
             <Text style={styles.sectionTitle}>Em Progresso</Text>
             <FlatList
                 data={inProgressCards}
@@ -81,6 +84,19 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     dueSoonButtonText: {
+        color: '#ffffff',
+        fontSize: 16,
+        fontWeight: 'bold',
+    },
+    suggestButton: {
+        backgroundColor: '#4682b4',
+        padding: 10,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 20,
+    },
+    suggestButtonText: {
         color: '#ffffff',
         fontSize: 16,
         fontWeight: 'bold',

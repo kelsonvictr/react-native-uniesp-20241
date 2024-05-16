@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import React, { useContext, useState, useEffect } from 'react';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import StudyCardsContext from '../contexts/StudyCardsContext';
@@ -88,7 +88,7 @@ const CardEditScreen = ({ route, navigation }) => {
             <Picker
                 selectedValue={status}
                 style={styles.input}
-                onValueChange={(itemValue, itemIndex) => setStatus(itemValue)}
+                onValueChange={(itemValue) => setStatus(itemValue)}
             >
                 <Picker.Item label="Backlog" value="backlog" />
                 <Picker.Item label="Em Progresso" value="in_progress" />

@@ -5,6 +5,7 @@ import { StudyCardsProvider } from './src/contexts/StudyCardsContext';
 import CardListScreen from './src/screens/CardListScreen';
 import CardEditScreen from './src/screens/CardEditScreen';
 import TasksDueSoonScreen from './src/screens/TasksDueSoonScreen';
+import SuggestCardScreen from './src/screens/SuggestCardScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ const App = () => {
                     <Stack.Screen name="CardList" component={CardListScreen} options={{ title: 'Study Cards' }} />
                     <Stack.Screen name="CardEdit" component={CardEditScreen} options={{ title: 'Editar Card' }} />
                     <Stack.Screen name="TasksDueSoon" component={TasksDueSoonScreen} options={{ title: 'Tasks a Vencer' }} />
+                    <Stack.Screen name="SuggestCard" component={SuggestCardScreen} options={{ title: 'Pedir Sugestão de Card' }} />
                 </Stack.Navigator>
             </NavigationContainer>
         </StudyCardsProvider>
