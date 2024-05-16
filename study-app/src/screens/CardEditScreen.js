@@ -79,7 +79,7 @@ const CardEditScreen = ({ route, navigation }) => {
                 multiline
             />
             <Text style={styles.label}>Data/Hora de Término:</Text>
-            <Button title="Escolhar Data" onPress={showDatePicker} color="#32cd320" />
+            <Button title="Escolhar Data" onPress={showDatePicker} color="#32cd32" />
             <DateTimePickerModal
               isVisible={isDatePickerVisible}
               mode="datetime"
@@ -87,6 +87,7 @@ const CardEditScreen = ({ route, navigation }) => {
               onCancel={hideDatePicker}
             />
             <Text style={styles.selectedDateLabel}>Data selecionada: {formatDate(dueDate)}</Text>
+
             <Text style={styles.label}>Status:</Text>
             <Picker
                 selectedValue={status}
